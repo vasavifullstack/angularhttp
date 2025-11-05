@@ -15,7 +15,7 @@
    </tr>
 </table>  -->
 
-<table>
+<table *ngIf="EmpData">
   <tr>
     <th>emp Id</th>
     <th>Name</th>
@@ -30,3 +30,8 @@
     
    </tr>
 </table> 
+<button (click)="fetchData()">fetch Data</button>
+<hr>
+
+<input type="text" placeholder="enter id"  #inputelement/>
+<button (click)="fetchDataByID(inputelement)">fetch data by Id</button>
