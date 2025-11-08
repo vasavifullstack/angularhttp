@@ -30,8 +30,17 @@
     
    </tr>
 </table> 
+<h3>fetch all data </h3>
 <button (click)="fetchData()">fetch Data</button>
 <hr>
-
+<h3>fetch the specific data by ID</h3>
 <input type="text" placeholder="enter id"  #inputelement/>
 <button (click)="fetchDataByID(inputelement)">fetch data by Id</button>
+<hr>
+<h3>Insert new recorded data</h3>
+<button (click)="inserestEmp()">Add Employee</button>
+<hr>
+<h3>Delete record</h3>
+<button (click)="deleteEmp(inputelement)">Delete Employee</button>
+
+
