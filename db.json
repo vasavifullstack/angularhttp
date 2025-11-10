@@ -12,43 +12,28 @@
     },
     {
       "id": "3",
-      "name": "Vijaya",
-      "salary": 2500000
+      "name": "Siva Reddy",
+      "salary": 450000
     },
     {
       "id": "4",
-      "name": "Siva Reddy",
+      "name": "Vijaya",
       "salary": 3500000
     },
     {
-      "id": "5",
       "name": "Vasundhara Reddy",
-      "salary": 1500000
+      "salary": 2000000,
+      "id": "5"
     },
     {
       "id": "6",
       "name": "Madhavi Reddy",
-      "salary": 2500000
+      "salary": 150000
     },
     {
       "id": 7,
       "name": "Manvitha Reddy",
-      "salary": 1000000
-    },
-    {
-      "id": 7,
-      "name": "Manvitha Reddy",
-      "salary": 1000000
-    },
-    {
-      "id": 7,
-      "name": "Manvitha Reddy",
-      "salary": 1000000
-    },
-    {
-      "id": 7,
-      "name": "Manvitha Reddy",
-      "salary": 1000000
+      "salary": 100000
     }
   ]
 }

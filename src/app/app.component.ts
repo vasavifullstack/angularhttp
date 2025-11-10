@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+[x: string]: any;
   
   title = 'angularhttp';
   mylocalFakeURL = "http://localhost:3000/Employee";
@@ -54,7 +55,7 @@ export class AppComponent implements OnInit {
     let newEmp={
     id:7,
     name:"Manvitha Reddy",
-    salary:1000000
+    salary:100000
     }
     let addURL=`http://localhost:3000/Employee`;
     this.http.post(addURL,newEmp).subscribe((response)=>{
@@ -73,5 +74,52 @@ deleteEmp(inputelement:HTMLInputElement){
     alert("delete successfully");
     this.fetchData();
   })
+
 }
-}
+    // ID is important to update the record
+  UpdateEmp(inputelement :
+     HTMLInputElement){
+    let Id = +inputelement.value;
+    let url = `http://localhost:3000/Employee/${Id}`; 
+    let body = {
+     
+      name : "vijaya" ,
+      salary:2000000,
+    };
+        this.http.put(url, body).subscribe((response) => {
+      console.log(response);
+      alert('employee Record Updated Successfully');
+      this.fetchData(); // to refresh the table data
+    });
+  
+  }
+  PatchStudent(inputelement: HTMLInputElement) {
+    let Id = +inputelement.value;
+    let url = `http://localhost:3000/Students/${Id}`; // 1
+    let body = {
+      course: 'Physics',
+    };
+
+    this.http.patch(url, body).subscribe((response) => {
+      console.log(response);
+      alert('Student Record Patched Successfully');
+      //this.fetchData(); // to refresh the table data
+    });
+  }
+PatchEmployee(inputelement: HTMLInputElement) {
+    let Id = +inputelement.value;
+    let url = `http://localhost:3000/Employee/${Id}`; // 1
+    let body = {
+      salary: 150000,
+    };
+
+    this.http.patch(url, body).subscribe((response) => {
+      console.log(response);
+      alert('Employee Record Patched Successfully');
+      //this.fetchData(); // to refresh the table data
+    });
+  }
+
+
+  }  
+
