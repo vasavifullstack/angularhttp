@@ -27,7 +27,17 @@ export class AppComponent implements OnInit {
   EmpData=false;
   //all details data
   fetchData(){
-      this.http.get(this.mylocalFakeURL).subscribe((response) => {
+       this.http.get(this.mylocalFakeURL,{
+      //   headers:{
+      //     'Authentication':'VasaviReddy',
+      //     'role':'author',
+      //     'location':'India'
+      //   },
+      //   params:{
+      //     company : "TCS",
+      //     role : "fullstackdeveloper"
+      //   }
+      }).subscribe((response) => {
         // console.log(response);
         this.data = response;
         this.EmpData=true;
